@@ -21,9 +21,9 @@ MAKE_ASP () {
 }
 
 
-# MAKE_ASP build
-# MAKE_ASP dev
-# MAKE_ASP run
+MAKE_ASP build
+MAKE_ASP dev
+MAKE_ASP run
 
 
 
