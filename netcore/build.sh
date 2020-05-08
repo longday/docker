@@ -3,10 +3,10 @@ set -x
 trap 'echo "Exit"; exit 1' INT
 ROOT=$(pwd)
 
-ASP_ROOT=${ROOT}/netcore/asp/3.1-alpine
+ASP_ROOT=${ROOT}/asp/3.1-alpine
 ASP_TAG=longday/asp-net-core:3.1
 
-ASPNODE_ROOT=${ROOT}/netcore/asp-nodejs/3.1-alpine
+ASPNODE_ROOT=${ROOT}/asp-nodejs/3.1-alpine
 ASPNODE_TAG=longday/asp-net-core-nodejs:3.1
 
 
@@ -25,8 +25,3 @@ MAKE_ASP build
 MAKE_ASP dev
 MAKE_ASP run
 
-
-
-cd ${ROOT}/tools/ci-node
-docker build --tag longday/ci-node:19.03.1-1 .
-docker push longday/ci-node:19.03.1-1
