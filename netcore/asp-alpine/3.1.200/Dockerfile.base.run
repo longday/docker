@@ -1,0 +1,20 @@
+#https://hub.docker.com/_/microsoft-dotnet-core-aspnet/
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.2-alpine
+
+# Add dependencies for Timezone support; disabling invariant mode
+RUN apk add --no-cache tzdata icu-libs
+
+ENV \
+    # Unset the value from the base image
+    ASPNETCORE_URLS= \
+    # Disable telemety
+    DOTNET_CLI_TELEMETRY_OPTOUT=1 \
+    # Set TZ
+    TZ=Europe/Moscow \
+    # Enable X-Forwarded 
+    ASPNETCORE_FORWARDEDHEADERS_ENABLED=true \
+    # Disable the invariant mode
+    DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false \
+    # Set locale
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8 

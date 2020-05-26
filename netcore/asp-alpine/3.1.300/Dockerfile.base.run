@@ -1,5 +1,5 @@
 #https://hub.docker.com/_/microsoft-dotnet-core-aspnet/
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.4-alpine
 
 # Add dependencies for Timezone support; disabling invariant mode
 RUN apk add --no-cache tzdata icu-libs

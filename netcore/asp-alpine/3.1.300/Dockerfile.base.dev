@@ -1,5 +1,5 @@
 #https://hub.docker.com/_/microsoft-dotnet-core-sdk/
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.300-alpine
 
 # Add dependencies for Timezone support; debug support
 RUN apk add --no-cache tzdata curl procps
