@@ -18,8 +18,8 @@ MAKE_ASP () {
     docker build --tag ${ASP_TAG}-${TYPE} .
     cd ${ASPNODE_ROOT}/${TYPE}
     docker build --build-arg BASE="${ASP_TAG}-${TYPE}" --tag ${ASPNODE_TAG}-${TYPE} . 
-    #docker push ${ASP_TAG}-${TYPE}
-    #docker push ${ASPNODE_TAG}-${TYPE}
+    docker push ${ASP_TAG}-${TYPE}
+    docker push ${ASPNODE_TAG}-${TYPE}
 }
 
 
