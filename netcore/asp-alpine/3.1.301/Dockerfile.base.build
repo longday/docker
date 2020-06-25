@@ -1,0 +1,9 @@
+#https://hub.docker.com/_/microsoft-dotnet-core-sdk/
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.301-alpine
+
+# Add dependencies for Timezone support;
+RUN apk add --no-cache tzdata
+
+ENV \
+    #Disable telemety
+    DOTNET_CLI_TELEMETRY_OPTOUT=1 

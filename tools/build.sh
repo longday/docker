@@ -3,7 +3,7 @@ set -x
 trap 'echo "Exit"; exit 1' INT
 ROOT=$(pwd)
 
-CI_NODE_V=19.03.8
+CI_NODE_V=19.03.11
 
 cd ${ROOT}/ci-node
 docker build --tag longday/ci-node:${CI_NODE_V} .
