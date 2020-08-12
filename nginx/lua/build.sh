@@ -7,6 +7,6 @@ VERSION=1.17.6
 
 ASP_TAG=longday/nginx:${VERSION}-alpine-lua
 
-docker build -f Dockerfile.lua.run --tag ${ASP_TAG} .
+docker build --tag ${ASP_TAG} .
 docker push ${ASP_TAG}
 
