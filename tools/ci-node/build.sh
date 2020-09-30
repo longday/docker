@@ -5,6 +5,5 @@ ROOT=$(pwd)
 
 CI_NODE_V=19.03.11
 
-cd ${ROOT}/ci-node
 docker build --tag longday/ci-node:${CI_NODE_V} .
 docker push longday/ci-node:${CI_NODE_V}
