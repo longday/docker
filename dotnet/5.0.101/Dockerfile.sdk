@@ -15,7 +15,7 @@ ENV \
 
 ENV ASPNETCORE_ENVIRONMENT=Development
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends procps \
+    && apt-get install -y --no-install-recommends procps netcat wait-for-it \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sSL https://aka.ms/getvsdbgsh | sh /dev/stdin -v latest -l /vsdbg
 
