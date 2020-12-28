@@ -10,5 +10,5 @@ ENV \
     # Enable X-Forwarded
     ASPNETCORE_FORWARDEDHEADERS_ENABLED=true \
     # Set locale
-    LC_ALL=en_US.UTF-8
+    LC_ALL=C.UTF-8
 
