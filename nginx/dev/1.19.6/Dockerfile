@@ -4,4 +4,4 @@ WORKDIR /etc/nginx
 RUN mkdir -p /etc/nginx/server.d
 
 COPY cert.key cert.pem nginx.conf start.sh ./
-CMD [ "start.sh" ]
+CMD ./start.sh
