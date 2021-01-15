@@ -10,7 +10,7 @@ if [ -z "$APP_NAME" ] ; then
     exit 1
 fi
 
-envsubst '$APP_PORT,$APP_NAME' < nginx.tpl > nginx.conf
+envsubst "`printf '${%s} ' $(compgen -A variable | grep APP_)`" < nginx.tpl > nginx.conf
 
 ENV=[$(printenv | grep REACT_APP_ | awk '{ gsub(/\"/,"\\\""); gsub("/","\\/"); printf "\"%s\",", $0 }')]
 sed -i "s/\"{settings}\"/$ENV/" /app/dist/index.html
