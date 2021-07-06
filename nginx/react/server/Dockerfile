@@ -1,4 +1,6 @@
-FROM nginx:1.19.6
+ARG VERSION
+
+FROM nginx:${VERSION}
 WORKDIR /etc/nginx
 
 ENV \

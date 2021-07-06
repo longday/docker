@@ -1,4 +1,6 @@
-FROM nginx:1.19.6-alpine
+ARG VERSION
+
+FROM nginx:${VERSION}-alpine
 # inotify events not working
 #RUN apk add --no-cache inotify-tools
 WORKDIR /etc/nginx
