@@ -1,5 +1,5 @@
 #https://hub.docker.com/_/microsoft-dotnet-aspnet/
-FROM mcr.microsoft.com/dotnet/aspnet:5.0.7-buster-slim-amd64
+FROM mcr.microsoft.com/dotnet/aspnet:5.0.8-buster-slim-amd64
 ENV \
     # Configure web servers to bind to port 80 when present
     ASPNETCORE_URLS=http://+:80 \

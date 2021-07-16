@@ -4,7 +4,7 @@ set -x
 export DOCKER_BUILDKIT=1
 
 
-VERSION=5.0.301
+VERSION=5.0.302
 
 MAKE_ASP () {
     TYPE=$1
