@@ -8,5 +8,17 @@ events {
 http {
     include mime.types;
     access_log      off;
+
+    set_real_ip_from 10.0.0.0/8;
+    set_real_ip_from 172.16.0.0/12;
+    set_real_ip_from 192.168.0.0/16;
+
+    set $map_access_ip ${APP_MAP_ACCESS_IP}
+
+    # geo $remote_addr $has_map_access {
+    #     default 0;
+    #     0.0.0.0 1;
+    # }
+
     include /apps/*/nginx.conf;
 }

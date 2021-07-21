@@ -10,6 +10,12 @@ if [ -z "$APP_S3_PROXY_PORT" ] ; then
     exit 1
 fi
 
+if [ -z "$APP_MAP_ACCESS_IP" ] ; then
+    #0.0.0.0/0
+    echo "APP_MAP_ACCESS_IP env not set!"
+    exit 1
+fi
+
 if [[ $APP_S3_PROXY_PORT -gt 0 ]]; then
     envsubst "`printf '${%s} ' $(compgen -A variable | grep APP_)`" < tpls/s3.nginx > nginx.conf
 else
